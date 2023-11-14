@@ -10,3 +10,7 @@ test('greet function check null, undefined, and empty string', () => {
     expect(greet(undefined)).toBe('Hello, my friend.');
     expect(greet('')).toBe('Hello, my friend.');
 });
+
+test('greet function check only uppercase name', () => {
+    expect(greet('JERRY')).toBe('HELLO, JERRY!');
+});
