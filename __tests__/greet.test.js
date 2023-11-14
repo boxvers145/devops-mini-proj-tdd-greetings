@@ -2,7 +2,7 @@
 const greet = require('../greet');
 
 test('greet function returns greeting', () => {
-    expect(greet('Bob')).toBe('Hello, Bob.');
+    expect(greet('Jean-Kevin')).toBe('Hello, Jean-Kevin.');
 });
 
 test('greet function check null, undefined, and empty string', () => {
@@ -12,9 +12,9 @@ test('greet function check null, undefined, and empty string', () => {
 });
 
 test('greet function check only uppercase name', () => {
-    expect(greet('JERRY')).toBe('HELLO, JERRY!');
+    expect(greet('KENOBI')).toBe('HELLO, KENOBI!');
 });
 
-test('greet function handles array of two names', () => {
-    expect(greet(['Jill', 'Jane'])).toBe('Hello, Jill and Jane.');
+test('greet function check two names', () => {
+    expect(greet(['Kratos', 'Thanathos'])).toBe('Hello, Kratos and Thanathos.');
 });
