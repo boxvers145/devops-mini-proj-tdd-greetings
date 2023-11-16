@@ -38,3 +38,9 @@ test('greet function check more than two names', () => {
 test('greet function check more names with normal and uppercase', () => {
     expect(greet(['KRATOS', 'Thanathos', 'Hypnos'])).toBe('Hello, Thanathos and Hypnos. AND HELLO KRATOS!');
 });
+
+//Test number 7
+
+test('greet multiple languages', () => {
+    expect(greet(['Kratos', 'Thanatos', 'fr'])).toBe('Bonjour, Kratos et Thanatos.');
+});
