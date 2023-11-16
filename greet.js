@@ -6,6 +6,11 @@ function greet(name) {
   if (Array.isArray(name)) {
     let tableLowerName = [];
     let tableUpperName = [];
+    let language = name[name.length-1];
+
+    if(name[name.length-1] == 'fr'){
+      name.pop();
+    }
 
     for (let counter = 0; counter < name.length; counter++) {
      if(name[counter] === name[counter].toUpperCase()) {
@@ -17,6 +22,11 @@ function greet(name) {
 
    let textMin = 'Hello';
    let textMax = '';
+
+   if(language == 'fr'){
+     textMin = 'Bonjour'
+   }
+   
    if(tableUpperName.length != 0){
      textMax = ' AND HELLO';
 
@@ -31,8 +41,17 @@ function greet(name) {
 
    for (let counter = 0; counter < tableLowerName.length; counter++) {
      if(counter == tableLowerName.length-1){
-       textMin += ` and ${tableLowerName[counter]}.`;
-     }else{
+
+      if(language != 'fr'){
+        textMin += ` and ${tableLowerName[counter]}.`;
+      }
+      
+      if(language == 'fr'){
+        textMin += ` et ${tableLowerName[counter]}.`;
+      }
+
+     }
+     else{
        textMin += `, ${tableLowerName[counter]}`;
      }
    }
